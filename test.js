@@ -4965,7 +4965,6 @@ cornerContour_ContourGrad.prototype = {
 			var half = Math.round(a * 255) << 24 | Math.round(r * 255) << 16 | Math.round(g * 255) << 8 | Math.round(b * 255);
 			var dx = ax1 + radius * Math.sin(angle);
 			var dy = ay1 + radius * Math.cos(angle);
-			haxe_Log.trace("pieXGradS",{ fileName : "cornerContour/ContourGrad.hx", lineNumber : 1203, className : "cornerContour.ContourGrad", methodName : "pieXGradS"});
 			if(!(this.endLine == 8 || this.endLine == 6 || this.endLine == 11 || this.endLine == 9)) {
 				if(this.endLine == 5) {
 					var angle2 = beta - 2 * step * totalSteps;
@@ -5328,7 +5327,6 @@ cornerContour_ContourGrad.prototype = {
 			var half = Math.round(a * 255) << 24 | Math.round(r * 255) << 16 | Math.round(g * 255) << 8 | Math.round(b * 255);
 			var dx = ax1 + radius * Math.sin(angle);
 			var dy = ay1 + radius * Math.cos(angle);
-			haxe_Log.trace("pieXGradS",{ fileName : "cornerContour/ContourGrad.hx", lineNumber : 1203, className : "cornerContour.ContourGrad", methodName : "pieXGradS"});
 			if(!(this.endLine == 8 || this.endLine == 6 || this.endLine == 11 || this.endLine == 9)) {
 				if(this.endLine == 5) {
 					var angle2 = beta - 2 * step * totalSteps;
@@ -10286,11 +10284,11 @@ cornerContour_io_Array2DTriangles.adjustWinding = function(this1) {
 	return cornerContour_io_Array2DTriangles.get_ax(this1) * cornerContour_io_Array2DTriangles.get_by(this1) - cornerContour_io_Array2DTriangles.get_bx(this1) * cornerContour_io_Array2DTriangles.get_ay(this1) + (cornerContour_io_Array2DTriangles.get_bx(this1) * cornerContour_io_Array2DTriangles.get_cy(this1) - cornerContour_io_Array2DTriangles.get_cx(this1) * cornerContour_io_Array2DTriangles.get_by(this1)) + (cornerContour_io_Array2DTriangles.get_cx(this1) * cornerContour_io_Array2DTriangles.get_ay(this1) - cornerContour_io_Array2DTriangles.get_ax(this1) * cornerContour_io_Array2DTriangles.get_cy(this1)) > 0;
 };
 var cornerContourWebGLTest_CornerContourWebGL = function() {
-	this.styleEnd = 5;
 	this.vertexColor = "vertexColor";
 	this.vertexPosition = "vertexPosition";
+	this.styleEnd = 5;
 	this.divertTrace = new cornerContourWebGLTest_DivertTrace();
-	haxe_Log.trace("Contour Test",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 79, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "new"});
+	haxe_Log.trace("Contour Test",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 97, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "new"});
 	this.width = 1024;
 	this.height = 768;
 	this.drawContours();
@@ -10300,7 +10298,7 @@ var cornerContourWebGLTest_CornerContourWebGL = function() {
 cornerContourWebGLTest_CornerContourWebGL.__name__ = true;
 cornerContourWebGLTest_CornerContourWebGL.prototype = {
 	rearrageDrawData: function() {
-		haxe_Log.trace("rearrangeDrawData",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 90, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "rearrageDrawData"});
+		haxe_Log.trace("rearrangeDrawData",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 108, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "rearrageDrawData"});
 		var pen = this.pen2D;
 		var data = pen.arr;
 		var redA = 0.;
@@ -10324,7 +10322,7 @@ cornerContourWebGLTest_CornerContourWebGL.prototype = {
 		var j = 0;
 		var this1 = new Float32Array(this.len);
 		this.arr32 = this1;
-		haxe_Log.trace("total triangles " + this.len,{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 116, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "rearrageDrawData"});
+		haxe_Log.trace("total triangles " + this.len,{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 134, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "rearrageDrawData"});
 		var _g = 0;
 		var _g1 = this.totalTriangles;
 		while(_g < _g1) {
@@ -10384,7 +10382,7 @@ cornerContourWebGLTest_CornerContourWebGL.prototype = {
 		}
 	}
 	,drawContours: function() {
-		haxe_Log.trace("drawContours",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 247, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "drawContours"});
+		haxe_Log.trace("drawContours",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 265, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "drawContours"});
 		this.pen2D = new cornerContour_Pen2DGrad(-16776961,-16711936,-16776961);
 		this.pen2D.currentColor = -16776961;
 		this.pen2D.colorB = -16711936;
@@ -10427,7 +10425,7 @@ cornerContourWebGLTest_CornerContourWebGL.prototype = {
 		this.turtleTest7(150. + Std.random(200),150. + Std.random(200));
 	}
 	,renderOnce: function() {
-		haxe_Log.trace("renderOnce",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 335, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "renderOnce"});
+		haxe_Log.trace("renderOnce",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 353, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "renderOnce"});
 		this.mainSheet = new cornerContourWebGLTest_Sheet();
 		this.mainSheet.create(this.width,this.height,true);
 		this.gl = this.mainSheet.gl;

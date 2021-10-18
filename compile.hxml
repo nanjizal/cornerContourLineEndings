@@ -10,6 +10,7 @@
 -lib traceCount
 
 -main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
 -D js-flatten 
 -dce full
 #--no-traces

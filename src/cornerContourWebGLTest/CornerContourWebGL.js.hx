@@ -42,19 +42,35 @@ class CornerContourWebGL {
     // -D gradientTest used in compile.hxml to change to and from gradients.
     
     // Test lineEnd styles here
-    //public var styleEnd = StyleEndLine.no;
-    //public var styleEnd = StyleEndLine.begin;
-    //public var styleEnd = StyleEndLine.end;
-    //public var styleEnd = StyleEndLine.both;
-    //public var styleEnd = StyleEndLine.halfRound;
+  #if StyleEndLine.no
+    public var styleEnd = StyleEndLine.no;
+  #elseif StyleEndLine.begin 
+    public var styleEnd = StyleEndLine.begin;
+  #elseif StyleEndLine.end
+    public var styleEnd = StyleEndLine.end;
+  #elseif StyleEndLine.both
+    public var styleEnd = StyleEndLine.both;
+  #elseif StyleEndLine.halfRound
+    public var styleEnd = StyleEndLine.halfRound;
+  #elseif StyleEndLine.quadrant
     public var styleEnd = StyleEndLine.quadrant;
-    //public var styleEnd = StyleEndLine.triangleBegin;
-    //public var styleEnd = StyleEndLine.triangleEnd;
-    //public var styleEnd = StyleEndLine.triangleBoth;
-    //public var styleEnd = StyleEndLine.arrowBegin;
-    //public var styleEnd = StyleEndLine.arrowEnd;
-    //public var styleEnd = StyleEndLine.arrowBoth;
-    //
+  #elseif StyleEndLine.triangleBegin
+    public var styleEnd = StyleEndLine.triangleBegin;
+  #elseif StyleEndLine.triangleEnd
+    public var styleEnd = StyleEndLine.triangleEnd;
+  #elseif StyleEndLine.triangleBoth;
+    public var styleEnd = StyleEndLine.triangleBoth;
+  #elseif StyleEndLine.arrowBegin
+    public var styleEnd = StyleEndLine.arrowBegin;
+  #elseif StyleEndLine.arrowEnd
+    public var styleEnd = StyleEndLine.arrowEnd;
+  #elseif StyleEndLine.arrowBoth
+    public var styleEnd = StyleEndLine.arrowBoth;
+  #else StyleEndLine.both
+    public var styleEnd = StyleEndLine.both;
+    // you may prefer no end default.
+    //public var styleEnd = StyleEndLine.no;
+  #end
     
     
     // cornerContour specific code

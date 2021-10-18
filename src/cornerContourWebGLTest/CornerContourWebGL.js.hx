@@ -5,6 +5,7 @@ import cornerContour.io.Float32Array;
 // contour code
 import cornerContour.Sketcher;
 import cornerContour.SketcherGrad;
+import cornerContour.IPen;
 import cornerContour.Pen2D;
 import cornerContour.Pen2DGrad;
 import cornerContour.StyleSketch;
@@ -38,12 +39,36 @@ function main(){
 
 class CornerContourWebGL {
     
+    // -D gradientTest used in compile.hxml to change to and from gradients.
+    
+    // Test lineEnd styles here
+    //public var styleEnd = StyleEndLine.no;
+    //public var styleEnd = StyleEndLine.begin;
+    //public var styleEnd = StyleEndLine.end;
+    //public var styleEnd = StyleEndLine.both;
+    //public var styleEnd = StyleEndLine.halfRound;
+    public var styleEnd = StyleEndLine.quadrant;
+    //public var styleEnd = StyleEndLine.triangleBegin;
+    //public var styleEnd = StyleEndLine.triangleEnd;
+    //public var styleEnd = StyleEndLine.triangleBoth;
+    //public var styleEnd = StyleEndLine.arrowBegin;
+    //public var styleEnd = StyleEndLine.arrowEnd;
+    //public var styleEnd = StyleEndLine.arrowBoth;
+    //
+    
+    
     // cornerContour specific code
     //var sketcher:       Sketcher;//Grad;
     //var pen2D:          Pen2D;//Grad;
     
+    #if gradientTest
     var sketcher:       SketcherGrad;
     var pen2D:          Pen2DGrad;
+    #else
+    var sketcher:       Sketcher;
+    var pen2D:          Pen2D;
+    #end
+    
     
     var quadtest_d      = "M200,300 Q400,50 600,300 T1000,300";
     var cubictest_d     = "M100,200 C100,100 250,100 250,200S400,300 400,200";
@@ -77,7 +102,7 @@ class CornerContourWebGL {
         rearrageDrawData();
         renderOnce();
     }
-    
+  #if gradientTest
     public
     function rearrageDrawData(){
         trace( 'rearrangeDrawData' );
@@ -170,20 +195,159 @@ class CornerContourWebGL {
             j++;
         }
     }
+  #else
+    public
+    function rearrageDrawData(){
+      trace( 'rearrangeDrawData' );
+      var pen = pen2D;
+      var data = pen.arr;
+      var red    = 0.;   
+      var green  = 0.;
+      var blue   = 0.; 
+      var alpha  = 0.;
+      var color: Int  = 0;
+      // triangle length
+      totalTriangles = Std.int( data.size/7 );
+      bufferLength = totalTriangles*3;
+       // xy rgba = 6
+      len = Std.int( totalTriangles * 6 * 3 );
+      var j = 0;
+      arr32 = new Float32Array( len );
+      for( i in 0...totalTriangles ){
+          pen.pos = i;
+          color = Std.int( data.color );
+          alpha = alphaChannel( color );
+          red   = redChannel(   color );
+          green = greenChannel( color );
+          blue  = blueChannel(  color );
+          // populate arr32.
+          arr32[ j ] = gx( data.ax );
+          j++;
+          arr32[ j ] = gy( data.ay );
+          j++;
+          arr32[ j ] = red;
+          j++;
+          arr32[ j ] = green;
+          j++;
+          arr32[ j ] = blue;
+          j++;
+          arr32[ j ] = alpha;
+          j++;
+          arr32[ j ] = gx( data.bx );
+          j++;
+          arr32[ j ] = gy( data.by );
+          j++;
+          arr32[ j ] = red;
+          j++;
+          arr32[ j ] = green;
+          j++;
+          arr32[ j ] = blue;
+          j++;
+          arr32[ j ] = alpha;
+          j++;
+          arr32[ j ] = gx( data.cx );
+          j++;
+          arr32[ j ] = gy( data.cy );
+          j++;
+          arr32[ j ] = red;
+          j++;
+          arr32[ j ] = green;
+          j++;
+          arr32[ j ] = blue;
+          j++;
+          arr32[ j ] = alpha;
+          j++;
+      }
+    }
+  #end
     public
     function drawContours(){
         trace( 'drawContours' );
         //pen2D = new Pen2D( 0xFF000000 ); //Grad( 0xFF0000FF, 0xFF00FF00, 0xFF0000FF );
+        
+    #if gradientTest
         pen2D = new Pen2DGrad( 0xFF0000FF, 0xFF00FF00, 0xFF0000FF );
-        arcSVG();
-        pen2D.currentColor = 0xff0000FF;
+        //arcSVG();
+        pen2D.currentColor = 0xFF0000FF;
         pen2D.colorB = 0xFF00FF00;
         pen2D.colorC = 0xFF0000FF;
-        lineTest();
-        birdSVG();
-        cubicSVG();
-        quadSVG();
+    #else 
+        pen2D = new Pen2D( 0xFF000000 );
+    #end
+        //randomTest();
+        //lineTest();
+        //birdSVG();
+        //cubicSVG();
+        //quadSVG();
+        
+        turtleTest0( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest1( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest2( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest3( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest4( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest5( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest6( 150. + Std.random(200), 150. + Std.random(200) );
+        pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
+    #if gradientTest
+        pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+    #end
+        turtleTest7( 150. + Std.random(200), 150. + Std.random(200) );
+        
     }
+    public
+    function randomTest(){
+    #if gradientTest
+        var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd );
+    #else
+        var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+    #end
+        sketcher.width = 20;
+        sketcher.moveTo( 40, 100 );
+        for( i in 0...100 ){
+            randomDraw( sketcher, pen2D );
+        }
+    }
+    public function randomDraw( s: Sketcher, p: IPen ){
+        var n = Std.random(3);
+        switch( n ){
+            case 0:
+                s.lineTo( 10 + 500*Math.random(),10+ 500*Math.random() );
+            case 1:
+                s.quadTo( 10+500*Math.random(),10+500*Math.random(), 10+500*Math.random(),10+500*Math.random() );
+            case 2:
+                var max = 0xFFFFFF;
+                p.currentColor = 0xFF000000 + Std.random( max );
+                if( p.currentColor == 0xFF000000 ) p.currentColor = 0xFFff0000;
+    #if gradientTest
+                p.colorB =  0xFF000000 + Std.random( max );
+    #end
+        }
+    }
+    
     public
     function renderOnce(){
         trace( 'renderOnce' );
@@ -226,24 +390,202 @@ class CornerContourWebGL {
     }
     public
     function lineTest(){
-        var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, StyleEndLine.both );
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd );
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
         //var sketcher = new Sketcher( pen2D, StyleSketch.Fine, StyleEndLine.both );
         sketcher.width = 50;
         sketcher.moveTo( 40, 100 );
         sketcher.lineTo( 100, 100 );
-        sketcher.lineTo( 80, 200 );
+        sketcher.lineTo( 120, 300 );
+        sketcher.moveTo( 300, 100 );
         sketcher.moveTo( 300, 100 );
         sketcher.lineTo( 380, 100 );
         sketcher.lineTo( 350, 0 );
+        //turtleTest8();
+    }
+    public
+    function turtleTest8( x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 50 )
+            .right( 90 )
+            .forward( 100 )
+            .right( 120 )
+            .forward( 70 )
+            .arc( 50, 120 );
+            sketcher.moveTo( 50, 120 ); // makes it draw end
+    }
+    public
+    function turtleTest0(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .forward( 60 )
+            .right( 45 )
+            .forward( 60 )
+            .right( 45 )
+            .forward( 70 )
+            .arc( 50, 120 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
+    }
+    public
+    function turtleTest1(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .right( 90 )
+            .forward( 60 )
+            .left( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .left( 50 )
+            .forward( 70 )
+            .forward( 10 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x+1, p.y+1 ); // makes it draw end
+    }
+    public
+    function turtleTest2(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .left( 90 )
+            .forward( 60 )
+            .right( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .right( 50 )
+            .forward( 70 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
+    }
+    public
+    function turtleTest3(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .left( 90 )
+            .forward( 60 )
+            .right( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .left( 50 )
+            .forward( 70 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
+    }
+    public
+    function turtleTest4(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .left( 90 )
+            .forward( 60 )
+            .left( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .left( 50 )
+            .forward( 70 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
+    }
+    public
+    function turtleTest5(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .left( 180 )
+            .forward( 60 )
+            .left( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .left( 50 )
+            .forward( 70 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
+    }
+    public
+    function turtleTest6(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .left( 180 )
+            .forward( 60 )
+            .right( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .left( 50 )
+            .forward( 70 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
+    }
+    public
+    function turtleTest7(x: Float, y: Float ){
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
+        sketcher.setPosition( x, y )
+            .penSize( 30 )
+            .left( 180 )
+            .forward( 60 )
+            .right( 45 )
+            .forward( 70 )
+            .arc( 50, 120 )
+            .right( 50 )
+            .forward( 70 );
+            var p = sketcher.position();
+            sketcher.moveTo( p.x, p.y ); // makes it draw end
     }
     /**
      * draws Kiwi svg
      */
     public
     function birdSVG(){
-        var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, StyleEndLine.both );
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
         //var sketcher = new Sketcher( pen2D, StyleSketch.Fine, StyleEndLine.both );
-        sketcher.width = 30;
+        sketcher.width = 10;
         var scaleTranslateContext = new ScaleTranslateContext( sketcher, 20, 0, 1, 1 );
         var p = new SvgPath( scaleTranslateContext );
         p.parse( bird_d );
@@ -253,16 +595,22 @@ class CornerContourWebGL {
      */
     public
     function cubicSVG(){
-        var sketcher = new SketcherGrad( pen2D, StyleSketch.Medium, StyleEndLine.both );
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd );
+        #end
         
         sketcher.width = 50;
         // function to adjust color of curve along length
         sketcher.colourFunction = function( colour: Int, x: Float, y: Float, x_: Float, y_: Float ):  Int {
             return Math.round( colour-1*x*y );
         }
+    #if gradientTest
         sketcher.colourFunctionB = function( colour: Int, x: Float, y: Float, x_: Float, y_: Float ):  Int {
             return Math.round( colour+x/y );
         }
+    #end
         var translateContext = new TranslationContext( sketcher, 50, 200 );
         var p = new SvgPath( translateContext );
         p.parse( cubictest_d );
@@ -272,7 +620,11 @@ class CornerContourWebGL {
      */
     public
     function quadSVG(){
-        var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, StyleEndLine.both );
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
         //var sketcher = new Sketcher( pen2D, StyleSketch.Fine, StyleEndLine.both );
         
         sketcher.width = 1;
@@ -314,7 +666,11 @@ class CornerContourWebGL {
     // draws an svg ellipse
     function draw_d( d: String, x: Float, y: Float, s: Float, w: Float, color: Int ){
         pen2D.currentColor = color;
-        var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, StyleEndLine.both );
+        #if gradientTest
+            var sketcher = new SketcherGrad( pen2D, StyleSketch.Fine, styleEnd ) ;
+        #else
+            var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
+        #end
         sketcher.width = w;
         var trans = new ScaleTranslateContext( sketcher, x, y, s, s );
         var p = new SvgPath( trans );

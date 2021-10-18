@@ -1,0 +1,581 @@
+### StyleEndLine_no;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_no.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.no
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_no.js"></script></body></html>' >StyleEndLine_no.html
+
+
+--next
+
+### StyleEndLine_begin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_begin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.begin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_begin.js"></script></body></html>' >StyleEndLine_begin.html
+
+--next
+
+### StyleEndLine_end;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_end.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.end
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_end.js"></script></body></html>' >StyleEndLine_end.html
+
+--next
+
+### StyleEndLine_both;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_both.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.both
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_both.js"></script></body></html>' >StyleEndLine_both.html
+
+--next
+
+### StyleEndLine_halfRound;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_halfRound.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.halfRound
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_halfRound.js"></script></body></html>' >StyleEndLine_halfRound.html
+
+--next
+
+### StyleEndLine_quadrant;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_quadrant.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.quadrant
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_quadrant.js"></script></body></html>' >StyleEndLine_quadrant.html
+
+--next
+
+### StyleEndLine_triangleBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_triangleBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.triangleBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleBegin.js"></script></body></html>' >StyleEndLine_triangleBegin.html
+
+--next
+
+### StyleEndLine_triangleEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_triangleEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.triangleEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleEnd.js"></script></body></html>' >StyleEndLine_triangleEnd.html
+
+--next
+
+### StyleEndLine_triangleBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_triangleBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.triangleBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleBoth.js"></script></body></html>' >StyleEndLine_triangleBoth.html
+
+--next
+
+### StyleEndLine_arrowBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_arrowBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.arrowBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBegin.js"></script></body></html>' >StyleEndLine_arrowBegin.html
+
+--next
+
+### StyleEndLine_arrowEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_arrowEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.arrowEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowEnd.js"></script></body></html>' >StyleEndLine_arrowEnd.html
+
+--next
+
+### StyleEndLine_arrowBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_arrowBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.arrowBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBoth.js"></script></body></html>' >StyleEndLine_arrowBoth.html
+
+--next
+
+### StyleEndLine_arrowBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js StyleEndLine_arrowBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.arrowBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBoth.js"></script></body></html>' >StyleEndLine_arrowBoth.html
+
+--next
+
+## _____ Gradient Ones ______
+############################################################################################
+
+### gradient_StyleEndLine_no;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_no.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.no
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_no.js"></script></body></html>' >gradient_StyleEndLine_no.html
+
+
+--next
+
+### gradient_StyleEndLine_begin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_begin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.begin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_begin.js"></script></body></html>' >gradient_StyleEndLine_begin.html
+
+--next
+
+### gradient_StyleEndLine_end;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_end.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.end
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_end.js"></script></body></html>' >gradient_StyleEndLine_end.html
+
+--next
+
+### gradient_StyleEndLine_both;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_both.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.both
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_both.js"></script></body></html>' >gradient_StyleEndLine_both.html
+
+--next
+
+### gradient_StyleEndLine_halfRound;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_halfRound.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.halfRound
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_halfRound.js"></script></body></html>' >gradient_StyleEndLine_halfRound.html
+
+--next
+
+### gradient_StyleEndLine_quadrant;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_quadrant.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.quadrant
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_quadrant.js"></script></body></html>' >gradient_StyleEndLine_quadrant.html
+
+--next
+
+### gradient_StyleEndLine_triangleBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_triangleBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.triangleBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleBegin.js"></script></body></html>' >gradient_StyleEndLine_triangleBegin.html
+
+--next
+
+### gradient_StyleEndLine_triangleEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_triangleEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.triangleEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleEnd.js"></script></body></html>' >gradient_StyleEndLine_triangleEnd.html
+
+--next
+
+### gradient_StyleEndLine_triangleBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_triangleBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.triangleBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleBoth.js"></script></body></html>' >gradient_StyleEndLine_triangleBoth.html
+
+--next
+
+### gradient_StyleEndLine_arrowBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_arrowBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.arrowBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowBegin.js"></script></body></html>' >gradient_StyleEndLine_arrowBegin.html
+
+--next
+
+### gradient_StyleEndLine_arrowEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_arrowEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.arrowEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowEnd.js"></script></body></html>' >gradient_StyleEndLine_arrowEnd.html
+
+--next
+
+### gradient_StyleEndLine_arrowBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js gradient_StyleEndLine_arrowBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.arrowBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowBoth.js"></script></body></html>' >gradient_StyleEndLine_arrowBoth.html
+
+--next
+
+

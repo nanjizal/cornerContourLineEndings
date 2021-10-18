@@ -58,7 +58,7 @@ class CornerContourWebGL {
     public var styleEnd = StyleEndLine.triangleBegin;
   #elseif StyleEndLine.triangleEnd
     public var styleEnd = StyleEndLine.triangleEnd;
-  #elseif StyleEndLine.triangleBoth;
+  #elseif StyleEndLine.triangleBoth
     public var styleEnd = StyleEndLine.triangleBoth;
   #elseif StyleEndLine.arrowBegin
     public var styleEnd = StyleEndLine.arrowBegin;

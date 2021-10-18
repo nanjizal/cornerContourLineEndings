@@ -4764,7 +4764,7 @@ cornerContour_io_Array2DTriangles.adjustWinding = function(this1) {
 var cornerContourWebGLTest_CornerContourWebGL = function() {
 	this.vertexColor = "vertexColor";
 	this.vertexPosition = "vertexPosition";
-	this.styleEnd = 1;
+	this.styleEnd = 5;
 	this.divertTrace = new cornerContourWebGLTest_DivertTrace();
 	haxe_Log.trace("Contour Test",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 113, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "new"});
 	this.width = 1024;

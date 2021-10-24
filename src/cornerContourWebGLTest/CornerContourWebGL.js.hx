@@ -66,6 +66,18 @@ class CornerContourWebGL {
     public var styleEnd = StyleEndLine.arrowEnd;
   #elseif StyleEndLine.arrowBoth
     public var styleEnd = StyleEndLine.arrowBoth;
+  #elseif StyleEndLine.circleBegin
+    public var styleEnd = StyleEndLine.circleBegin;
+  #elseif StyleEndLine.circleEnd
+    public var styleEnd = StyleEndLine.circleEnd;
+  #elseif StyleEndLine.circleBoth
+    public var styleEnd = StyleEndLine.circleBoth;
+  #elseif StyleEndLine.squareBegin
+    public var styleEnd = StyleEndLine.squareBegin;
+  #elseif StyleEndLine.squareEnd
+    public var styleEnd = StyleEndLine.squareEnd;
+  #elseif StyleEndLine.squareBoth
+    public var styleEnd = StyleEndLine.squareBoth;
   #else StyleEndLine.both
     public var styleEnd = StyleEndLine.both;
     // you may prefer no end default.
@@ -84,7 +96,7 @@ class CornerContourWebGL {
     var sketcher:       Sketcher;
     var pen2D:          Pen2D;
     #end
-    
+    var penWidth = 40.;
     
     var quadtest_d      = "M200,300 Q400,50 600,300 T1000,300";
     var cubictest_d     = "M100,200 C100,100 250,100 250,200S400,300 400,200";
@@ -295,7 +307,9 @@ class CornerContourWebGL {
         //birdSVG();
         //cubicSVG();
         //quadSVG();
-        
+        #if gradientTest
+            pen2D.colorB = 0xFF000000 + Std.random( 0xFFFFFF );
+        #end
         turtleTest0( 150. + Std.random(200), 150. + Std.random(200) );
         pen2D.currentColor = 0xFF000000 + Std.random( 0xFFFFFF );
     #if gradientTest
@@ -412,7 +426,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         //var sketcher = new Sketcher( pen2D, StyleSketch.Fine, StyleEndLine.both );
-        sketcher.width = 50;
+        sketcher.width = penWidth;
         sketcher.moveTo( 40, 100 );
         sketcher.lineTo( 100, 100 );
         sketcher.lineTo( 120, 300 );
@@ -430,7 +444,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 50 )
+            .penSize( penWidth )
             .right( 90 )
             .forward( 100 )
             .right( 120 )
@@ -446,7 +460,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .forward( 60 )
             .right( 45 )
             .forward( 60 )
@@ -464,7 +478,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .right( 90 )
             .forward( 60 )
             .left( 45 )
@@ -484,7 +498,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .left( 90 )
             .forward( 60 )
             .right( 45 )
@@ -503,7 +517,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .left( 90 )
             .forward( 60 )
             .right( 45 )
@@ -522,7 +536,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .left( 90 )
             .forward( 60 )
             .left( 45 )
@@ -541,7 +555,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .left( 180 )
             .forward( 60 )
             .left( 45 )
@@ -560,7 +574,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .left( 180 )
             .forward( 60 )
             .right( 45 )
@@ -579,7 +593,7 @@ class CornerContourWebGL {
             var sketcher = new Sketcher( pen2D, StyleSketch.Fine, styleEnd );
         #end
         sketcher.setPosition( x, y )
-            .penSize( 30 )
+            .penSize( penWidth )
             .left( 180 )
             .forward( 60 )
             .right( 45 )

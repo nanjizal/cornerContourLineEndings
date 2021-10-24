@@ -25,7 +25,7 @@ var cornerContour_Contour = function(pen_,endLine_) {
 		endLine_ = 0;
 	}
 	this.count = 0;
-	this.arrowFactor = 1.45;
+	this.endCapFactor = 1.45;
 	this.pointsAnti = [];
 	this.pointsClock = [];
 	this.pen = pen_;
@@ -732,8 +732,8 @@ cornerContour_Contour.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 13 || this1 == 14) {
 				var angle2 = beta - step * totalSteps / 2;
-				fx = ax1 - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-				fy = ay1 - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+				fx = ax1 - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+				fy = ay1 - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 				radius *= 2;
 				delta = Math.pow(radius / 2,2);
 			}
@@ -753,10 +753,10 @@ cornerContour_Contour.prototype = {
 					var i = _g++;
 					var this1 = this.endLine;
 					if(this1 == 13 || this1 == 14) {
-						cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-						ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+						cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+						ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 					} else {
 						cx = ax1 + radius * Math.sin(angle);
 						cy = ay1 + radius * Math.cos(angle);
@@ -815,11 +815,11 @@ cornerContour_Contour.prototype = {
 			} else {
 				if(this.endLine == 11 || this.endLine == 10) {
 					angle = beta;
-					var dx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					var dy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					var dx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					var dy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					angle = beta - step * totalSteps / 2;
-					cx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					var color_ = color;
 					if(color_ == null) {
 						color_ = -1;
@@ -828,8 +828,8 @@ cornerContour_Contour.prototype = {
 					bx = cx;
 					by = cy;
 					angle += step * totalSteps / 2;
-					cx = ax1 + radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 + radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 + radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 + radius * this.endCapFactor * Math.cos(angle);
 					var color_ = color;
 					if(color_ == null) {
 						color_ = -1;
@@ -863,18 +863,18 @@ cornerContour_Contour.prototype = {
 						var this1 = this.endLine;
 						if(this1 == 16 || this1 == 17) {
 							angle = beta;
-							var arrowFactor = 1.45;
-							var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-							var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+							var endCapFactor = 1.45;
+							var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+							var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 							angle = beta - step * totalSteps / 2;
-							cx = dx - 2 * radius * arrowFactor * Math.sin(angle);
-							cy = dy - 2 * radius * arrowFactor * Math.cos(angle);
+							cx = dx - 2 * radius * endCapFactor * Math.sin(angle);
+							cy = dy - 2 * radius * endCapFactor * Math.cos(angle);
 							var lastAngle = angle;
 							angle += step * totalSteps / 2;
-							ex = ax1 + radius * arrowFactor * Math.sin(angle);
-							ey = ay1 + radius * arrowFactor * Math.cos(angle);
-							fx = ex - 2 * radius * arrowFactor * Math.sin(lastAngle);
-							fy = ey - 2 * radius * arrowFactor * Math.cos(lastAngle);
+							ex = ax1 + radius * endCapFactor * Math.sin(angle);
+							ey = ay1 + radius * endCapFactor * Math.cos(angle);
+							fx = ex - 2 * radius * endCapFactor * Math.sin(lastAngle);
+							fy = ey - 2 * radius * endCapFactor * Math.cos(lastAngle);
 							var color_ = color;
 							if(color_ == null) {
 								color_ = -1;
@@ -1081,8 +1081,8 @@ cornerContour_Contour.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 13 || this1 == 14) {
 				var angle2 = beta - step * totalSteps / 2;
-				fx = ax1 - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-				fy = ay1 - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+				fx = ax1 - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+				fy = ay1 - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 				radius *= 2;
 				delta = Math.pow(radius / 2,2);
 			}
@@ -1102,10 +1102,10 @@ cornerContour_Contour.prototype = {
 					var i = _g++;
 					var this1 = this.endLine;
 					if(this1 == 13 || this1 == 14) {
-						cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-						ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+						cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+						ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 					} else {
 						cx = ax1 + radius * Math.sin(angle);
 						cy = ay1 + radius * Math.cos(angle);
@@ -1164,11 +1164,11 @@ cornerContour_Contour.prototype = {
 			} else {
 				if(this.endLine == 11 || this.endLine == 10) {
 					angle = beta;
-					var dx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					var dy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					var dx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					var dy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					angle = beta - step * totalSteps / 2;
-					cx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					var color_ = color;
 					if(color_ == null) {
 						color_ = -1;
@@ -1177,8 +1177,8 @@ cornerContour_Contour.prototype = {
 					bx = cx;
 					by = cy;
 					angle += step * totalSteps / 2;
-					cx = ax1 + radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 + radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 + radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 + radius * this.endCapFactor * Math.cos(angle);
 					var color_ = color;
 					if(color_ == null) {
 						color_ = -1;
@@ -1212,18 +1212,18 @@ cornerContour_Contour.prototype = {
 						var this1 = this.endLine;
 						if(this1 == 16 || this1 == 17) {
 							angle = beta;
-							var arrowFactor = 1.45;
-							var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-							var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+							var endCapFactor = 1.45;
+							var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+							var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 							angle = beta - step * totalSteps / 2;
-							cx = dx - 2 * radius * arrowFactor * Math.sin(angle);
-							cy = dy - 2 * radius * arrowFactor * Math.cos(angle);
+							cx = dx - 2 * radius * endCapFactor * Math.sin(angle);
+							cy = dy - 2 * radius * endCapFactor * Math.cos(angle);
 							var lastAngle = angle;
 							angle += step * totalSteps / 2;
-							ex = ax1 + radius * arrowFactor * Math.sin(angle);
-							ey = ay1 + radius * arrowFactor * Math.cos(angle);
-							fx = ex - 2 * radius * arrowFactor * Math.sin(lastAngle);
-							fy = ey - 2 * radius * arrowFactor * Math.cos(lastAngle);
+							ex = ax1 + radius * endCapFactor * Math.sin(angle);
+							ey = ay1 + radius * endCapFactor * Math.cos(angle);
+							fx = ex - 2 * radius * endCapFactor * Math.sin(lastAngle);
+							fy = ey - 2 * radius * endCapFactor * Math.cos(lastAngle);
 							var color_ = color;
 							if(color_ == null) {
 								color_ = -1;
@@ -5939,8 +5939,8 @@ cornerContour_Contour.prototype = {
 		var this1 = this.endLine;
 		if(this1 == 12 || this1 == 14) {
 			var angle2 = beta - step * totalSteps / 2;
-			fx = ax - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-			fy = ay - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+			fx = ax - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+			fy = ay - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 			radius *= 2;
 			delta = Math.pow(radius / 2,2);
 		}
@@ -5958,10 +5958,10 @@ cornerContour_Contour.prototype = {
 				var i = _g++;
 				var this1 = this.endLine;
 				if(this1 == 12 || this1 == 14) {
-					cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-					cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-					ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-					ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+					cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+					cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+					ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+					ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 				} else {
 					cx = ax + radius * Math.sin(angle);
 					cy = ay + radius * Math.cos(angle);
@@ -6021,12 +6021,12 @@ cornerContour_Contour.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 9 || this1 == 11) {
 				angle = beta;
-				var arrowFactor = 1.45;
-				var dx = ax - radius * arrowFactor * Math.sin(angle);
-				var dy = ay - radius * arrowFactor * Math.cos(angle);
+				var endCapFactor = 1.45;
+				var dx = ax - radius * endCapFactor * Math.sin(angle);
+				var dy = ay - radius * endCapFactor * Math.cos(angle);
 				angle = beta - step * totalSteps / 2;
-				cx = ax - radius * arrowFactor * Math.sin(angle);
-				cy = ay - radius * arrowFactor * Math.cos(angle);
+				cx = ax - radius * endCapFactor * Math.sin(angle);
+				cy = ay - radius * endCapFactor * Math.cos(angle);
 				var color_ = color;
 				if(color_ == null) {
 					color_ = -1;
@@ -6035,8 +6035,8 @@ cornerContour_Contour.prototype = {
 				bx = cx;
 				by = cy;
 				angle += step * totalSteps / 2;
-				cx = ax + radius * arrowFactor * Math.sin(angle);
-				cy = ay + radius * arrowFactor * Math.cos(angle);
+				cx = ax + radius * endCapFactor * Math.sin(angle);
+				cy = ay + radius * endCapFactor * Math.cos(angle);
 				var color_ = color;
 				if(color_ == null) {
 					color_ = -1;
@@ -6070,17 +6070,17 @@ cornerContour_Contour.prototype = {
 					var this1 = this.endLine;
 					if(this1 == 15 || this1 == 17) {
 						angle = beta;
-						var dx = ax - radius * this.arrowFactor * Math.sin(angle);
-						var dy = ay - radius * this.arrowFactor * Math.cos(angle);
+						var dx = ax - radius * this.endCapFactor * Math.sin(angle);
+						var dy = ay - radius * this.endCapFactor * Math.cos(angle);
 						angle = beta - step * totalSteps / 2;
-						cx = dx - 2 * radius * this.arrowFactor * Math.sin(angle);
-						cy = dy - 2 * radius * this.arrowFactor * Math.cos(angle);
+						cx = dx - 2 * radius * this.endCapFactor * Math.sin(angle);
+						cy = dy - 2 * radius * this.endCapFactor * Math.cos(angle);
 						var lastAngle = angle;
 						angle += step * totalSteps / 2;
-						ex = ax + radius * this.arrowFactor * Math.sin(angle);
-						ey = ay + radius * this.arrowFactor * Math.cos(angle);
-						fx = ex - 2 * radius * this.arrowFactor * Math.sin(lastAngle);
-						fy = ey - 2 * radius * this.arrowFactor * Math.cos(lastAngle);
+						ex = ax + radius * this.endCapFactor * Math.sin(angle);
+						ey = ay + radius * this.endCapFactor * Math.cos(angle);
+						fx = ex - 2 * radius * this.endCapFactor * Math.sin(lastAngle);
+						fy = ey - 2 * radius * this.endCapFactor * Math.cos(lastAngle);
 						var color_ = color;
 						if(color_ == null) {
 							color_ = -1;
@@ -6104,7 +6104,7 @@ var cornerContour_ContourGrad = function(pen_,endLine_) {
 		endLine_ = 0;
 	}
 	this.count = 0;
-	this.arrowFactor = 1.45;
+	this.endCapFactor = 1.45;
 	this.pointsAnti = [];
 	this.pointsClock = [];
 	this.colorGradChoice = "colorAB";
@@ -6608,8 +6608,8 @@ cornerContour_ContourGrad.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 12 || this1 == 14) {
 				var angle2 = beta - step * totalSteps / 2;
-				fx = ax1 - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-				fy = ay1 - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+				fx = ax1 - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+				fy = ay1 - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 				radius *= 2;
 				delta = Math.pow(radius / 2,2);
 			}
@@ -6630,10 +6630,10 @@ cornerContour_ContourGrad.prototype = {
 					var i = _g++;
 					var this1 = this.endLine;
 					if(this1 == 12 || this1 == 14) {
-						cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-						ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+						cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+						ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 					} else {
 						cx = ax1 + radius * Math.sin(angle);
 						cy = ay1 + radius * Math.cos(angle);
@@ -6788,18 +6788,18 @@ cornerContour_ContourGrad.prototype = {
 				var this1 = this.endLine;
 				if(this1 == 9 || this1 == 11) {
 					angle = beta;
-					var arrowFactor = 1.45;
-					var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-					var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+					var endCapFactor = 1.45;
+					var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+					var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 					angle = beta - step * totalSteps / 2;
-					cx = ax1 - radius * arrowFactor * Math.sin(angle);
-					cy = ay1 - radius * arrowFactor * Math.cos(angle);
+					cx = ax1 - radius * endCapFactor * Math.sin(angle);
+					cy = ay1 - radius * endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(dx,dy,cx,cy,ax1,ay1,col.colorAnti,half,half);
 					bx = cx;
 					by = cy;
 					angle += step * totalSteps / 2;
-					cx = ax1 + radius * arrowFactor * Math.sin(angle);
-					cy = ay1 + radius * arrowFactor * Math.cos(angle);
+					cx = ax1 + radius * endCapFactor * Math.sin(angle);
+					cy = ay1 + radius * endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(ax1,ay1,bx,by,cx,cy,half,col.colorClock,half);
 				} else {
 					var this1 = this.endLine;
@@ -6821,18 +6821,18 @@ cornerContour_ContourGrad.prototype = {
 						var this1 = this.endLine;
 						if(this1 == 15 || this1 == 17) {
 							angle = beta;
-							var arrowFactor = 1.45;
-							var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-							var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+							var endCapFactor = 1.45;
+							var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+							var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 							angle = beta - step * totalSteps / 2;
-							cx = dx - 2 * radius * arrowFactor * Math.sin(angle);
-							cy = dy - 2 * radius * arrowFactor * Math.cos(angle);
+							cx = dx - 2 * radius * endCapFactor * Math.sin(angle);
+							cy = dy - 2 * radius * endCapFactor * Math.cos(angle);
 							var lastAngle = angle;
 							angle += step * totalSteps / 2;
-							ex = ax1 + radius * arrowFactor * Math.sin(angle);
-							ey = ay1 + radius * arrowFactor * Math.cos(angle);
-							fx = ex - 2 * radius * arrowFactor * Math.sin(lastAngle);
-							fy = ey - 2 * radius * arrowFactor * Math.cos(lastAngle);
+							ex = ax1 + radius * endCapFactor * Math.sin(angle);
+							ey = ay1 + radius * endCapFactor * Math.cos(angle);
+							fx = ex - 2 * radius * endCapFactor * Math.sin(lastAngle);
+							fy = ey - 2 * radius * endCapFactor * Math.cos(lastAngle);
 							this.pen.triangle2DGrad(fx,fy,cx,cy,dx,dy,col.colorClock,col.colorAnti,col.colorAnti);
 							this.pen.triangle2DGrad(fx,fy,dx,dy,ex,ey,col.colorClock,col.colorAnti,col.colorClock);
 						}
@@ -7040,8 +7040,8 @@ cornerContour_ContourGrad.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 12 || this1 == 14) {
 				var angle2 = beta - step * totalSteps / 2;
-				fx = ax1 - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-				fy = ay1 - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+				fx = ax1 - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+				fy = ay1 - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 				radius *= 2;
 				delta = Math.pow(radius / 2,2);
 			}
@@ -7062,10 +7062,10 @@ cornerContour_ContourGrad.prototype = {
 					var i = _g++;
 					var this1 = this.endLine;
 					if(this1 == 12 || this1 == 14) {
-						cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-						ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+						cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+						ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 					} else {
 						cx = ax1 + radius * Math.sin(angle);
 						cy = ay1 + radius * Math.cos(angle);
@@ -7220,18 +7220,18 @@ cornerContour_ContourGrad.prototype = {
 				var this1 = this.endLine;
 				if(this1 == 9 || this1 == 11) {
 					angle = beta;
-					var arrowFactor = 1.45;
-					var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-					var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+					var endCapFactor = 1.45;
+					var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+					var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 					angle = beta - step * totalSteps / 2;
-					cx = ax1 - radius * arrowFactor * Math.sin(angle);
-					cy = ay1 - radius * arrowFactor * Math.cos(angle);
+					cx = ax1 - radius * endCapFactor * Math.sin(angle);
+					cy = ay1 - radius * endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(dx,dy,cx,cy,ax1,ay1,col.colorAnti,half,half);
 					bx = cx;
 					by = cy;
 					angle += step * totalSteps / 2;
-					cx = ax1 + radius * arrowFactor * Math.sin(angle);
-					cy = ay1 + radius * arrowFactor * Math.cos(angle);
+					cx = ax1 + radius * endCapFactor * Math.sin(angle);
+					cy = ay1 + radius * endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(ax1,ay1,bx,by,cx,cy,half,col.colorClock,half);
 				} else {
 					var this1 = this.endLine;
@@ -7253,18 +7253,18 @@ cornerContour_ContourGrad.prototype = {
 						var this1 = this.endLine;
 						if(this1 == 15 || this1 == 17) {
 							angle = beta;
-							var arrowFactor = 1.45;
-							var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-							var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+							var endCapFactor = 1.45;
+							var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+							var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 							angle = beta - step * totalSteps / 2;
-							cx = dx - 2 * radius * arrowFactor * Math.sin(angle);
-							cy = dy - 2 * radius * arrowFactor * Math.cos(angle);
+							cx = dx - 2 * radius * endCapFactor * Math.sin(angle);
+							cy = dy - 2 * radius * endCapFactor * Math.cos(angle);
 							var lastAngle = angle;
 							angle += step * totalSteps / 2;
-							ex = ax1 + radius * arrowFactor * Math.sin(angle);
-							ey = ay1 + radius * arrowFactor * Math.cos(angle);
-							fx = ex - 2 * radius * arrowFactor * Math.sin(lastAngle);
-							fy = ey - 2 * radius * arrowFactor * Math.cos(lastAngle);
+							ex = ax1 + radius * endCapFactor * Math.sin(angle);
+							ey = ay1 + radius * endCapFactor * Math.cos(angle);
+							fx = ex - 2 * radius * endCapFactor * Math.sin(lastAngle);
+							fy = ey - 2 * radius * endCapFactor * Math.cos(lastAngle);
 							this.pen.triangle2DGrad(fx,fy,cx,cy,dx,dy,col.colorClock,col.colorAnti,col.colorAnti);
 							this.pen.triangle2DGrad(fx,fy,dx,dy,ex,ey,col.colorClock,col.colorAnti,col.colorClock);
 						}
@@ -7879,8 +7879,8 @@ cornerContour_ContourGrad.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 13 || this1 == 14) {
 				var angle2 = beta - step * totalSteps / 2;
-				fx = ax1 - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-				fy = ay1 - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+				fx = ax1 - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+				fy = ay1 - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 				radius *= 2;
 				delta = Math.pow(radius / 2,2);
 			}
@@ -7901,10 +7901,10 @@ cornerContour_ContourGrad.prototype = {
 					var i = _g++;
 					var this1 = this.endLine;
 					if(this1 == 13 || this1 == 14) {
-						cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-						ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+						cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+						ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 					} else {
 						cx = ax1 + radius * Math.sin(angle);
 						cy = ay1 + radius * Math.cos(angle);
@@ -8059,17 +8059,17 @@ cornerContour_ContourGrad.prototype = {
 				var this1 = this.endLine;
 				if(this1 == 10 || this1 == 11) {
 					angle = beta;
-					var dx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					var dy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					var dx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					var dy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					angle = beta - step * totalSteps / 2;
-					cx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(dx,dy,cx,cy,ax1,ay1,col.colorAnti,half,half);
 					bx = cx;
 					by = cy;
 					angle += step * totalSteps / 2;
-					cx = ax1 + radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 + radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 + radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 + radius * this.endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(ax1,ay1,bx,by,cx,cy,half,half,col.colorClock);
 				} else {
 					var this1 = this.endLine;
@@ -8091,18 +8091,18 @@ cornerContour_ContourGrad.prototype = {
 						var this1 = this.endLine;
 						if(this1 == 16 || this1 == 17) {
 							angle = beta;
-							var arrowFactor = 1.45;
-							var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-							var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+							var endCapFactor = 1.45;
+							var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+							var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 							angle = beta - step * totalSteps / 2;
-							cx = dx - 2 * radius * arrowFactor * Math.sin(angle);
-							cy = dy - 2 * radius * arrowFactor * Math.cos(angle);
+							cx = dx - 2 * radius * endCapFactor * Math.sin(angle);
+							cy = dy - 2 * radius * endCapFactor * Math.cos(angle);
 							var lastAngle = angle;
 							angle += step * totalSteps / 2;
-							ex = ax1 + radius * arrowFactor * Math.sin(angle);
-							ey = ay1 + radius * arrowFactor * Math.cos(angle);
-							fx = ex - 2 * radius * arrowFactor * Math.sin(lastAngle);
-							fy = ey - 2 * radius * arrowFactor * Math.cos(lastAngle);
+							ex = ax1 + radius * endCapFactor * Math.sin(angle);
+							ey = ay1 + radius * endCapFactor * Math.cos(angle);
+							fx = ex - 2 * radius * endCapFactor * Math.sin(lastAngle);
+							fy = ey - 2 * radius * endCapFactor * Math.cos(lastAngle);
 							this.pen.triangle2DGrad(fx,fy,cx,cy,dx,dy,col.colorClock,col.colorAnti,col.colorAnti);
 							this.pen.triangle2DGrad(fx,fy,dx,dy,ex,ey,col.colorClock,col.colorClock,col.colorAnti);
 						}
@@ -8308,8 +8308,8 @@ cornerContour_ContourGrad.prototype = {
 			var this1 = this.endLine;
 			if(this1 == 13 || this1 == 14) {
 				var angle2 = beta - step * totalSteps / 2;
-				fx = ax1 - 0.75 * this.arrowFactor * radius * Math.sin(angle2);
-				fy = ay1 - 0.75 * this.arrowFactor * radius * Math.cos(angle2);
+				fx = ax1 - 0.75 * this.endCapFactor * radius * Math.sin(angle2);
+				fy = ay1 - 0.75 * this.endCapFactor * radius * Math.cos(angle2);
 				radius *= 2;
 				delta = Math.pow(radius / 2,2);
 			}
@@ -8330,10 +8330,10 @@ cornerContour_ContourGrad.prototype = {
 					var i = _g++;
 					var this1 = this.endLine;
 					if(this1 == 13 || this1 == 14) {
-						cx = fx + 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						cy = fy + 0.5 * this.arrowFactor * radius * Math.cos(angle);
-						ex = fx - 0.5 * this.arrowFactor * radius * Math.sin(angle);
-						ey = fy - 0.5 * this.arrowFactor * radius * Math.cos(angle);
+						cx = fx + 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						cy = fy + 0.5 * this.endCapFactor * radius * Math.cos(angle);
+						ex = fx - 0.5 * this.endCapFactor * radius * Math.sin(angle);
+						ey = fy - 0.5 * this.endCapFactor * radius * Math.cos(angle);
 					} else {
 						cx = ax1 + radius * Math.sin(angle);
 						cy = ay1 + radius * Math.cos(angle);
@@ -8488,17 +8488,17 @@ cornerContour_ContourGrad.prototype = {
 				var this1 = this.endLine;
 				if(this1 == 10 || this1 == 11) {
 					angle = beta;
-					var dx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					var dy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					var dx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					var dy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					angle = beta - step * totalSteps / 2;
-					cx = ax1 - radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 - radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 - radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 - radius * this.endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(dx,dy,cx,cy,ax1,ay1,col.colorAnti,half,half);
 					bx = cx;
 					by = cy;
 					angle += step * totalSteps / 2;
-					cx = ax1 + radius * this.arrowFactor * Math.sin(angle);
-					cy = ay1 + radius * this.arrowFactor * Math.cos(angle);
+					cx = ax1 + radius * this.endCapFactor * Math.sin(angle);
+					cy = ay1 + radius * this.endCapFactor * Math.cos(angle);
 					this.pen.triangle2DGrad(ax1,ay1,bx,by,cx,cy,half,half,col.colorClock);
 				} else {
 					var this1 = this.endLine;
@@ -8520,18 +8520,18 @@ cornerContour_ContourGrad.prototype = {
 						var this1 = this.endLine;
 						if(this1 == 16 || this1 == 17) {
 							angle = beta;
-							var arrowFactor = 1.45;
-							var dx = ax1 - radius * arrowFactor * Math.sin(angle);
-							var dy = ay1 - radius * arrowFactor * Math.cos(angle);
+							var endCapFactor = 1.45;
+							var dx = ax1 - radius * endCapFactor * Math.sin(angle);
+							var dy = ay1 - radius * endCapFactor * Math.cos(angle);
 							angle = beta - step * totalSteps / 2;
-							cx = dx - 2 * radius * arrowFactor * Math.sin(angle);
-							cy = dy - 2 * radius * arrowFactor * Math.cos(angle);
+							cx = dx - 2 * radius * endCapFactor * Math.sin(angle);
+							cy = dy - 2 * radius * endCapFactor * Math.cos(angle);
 							var lastAngle = angle;
 							angle += step * totalSteps / 2;
-							ex = ax1 + radius * arrowFactor * Math.sin(angle);
-							ey = ay1 + radius * arrowFactor * Math.cos(angle);
-							fx = ex - 2 * radius * arrowFactor * Math.sin(lastAngle);
-							fy = ey - 2 * radius * arrowFactor * Math.cos(lastAngle);
+							ex = ax1 + radius * endCapFactor * Math.sin(angle);
+							ey = ay1 + radius * endCapFactor * Math.cos(angle);
+							fx = ex - 2 * radius * endCapFactor * Math.sin(lastAngle);
+							fy = ey - 2 * radius * endCapFactor * Math.cos(lastAngle);
 							this.pen.triangle2DGrad(fx,fy,cx,cy,dx,dy,col.colorClock,col.colorAnti,col.colorAnti);
 							this.pen.triangle2DGrad(fx,fy,dx,dy,ex,ey,col.colorClock,col.colorClock,col.colorAnti);
 						}
@@ -13610,7 +13610,7 @@ var cornerContourWebGLTest_CornerContourWebGL = function() {
 	this.vertexColor = "vertexColor";
 	this.vertexPosition = "vertexPosition";
 	this.penWidth = 40.;
-	this.styleEnd = 17;
+	this.styleEnd = 5;
 	this.divertTrace = new cornerContourWebGLTest_DivertTrace();
 	haxe_Log.trace("Contour Test",{ fileName : "src/cornerContourWebGLTest/CornerContourWebGL.js.hx", lineNumber : 125, className : "cornerContourWebGLTest.CornerContourWebGL", methodName : "new"});
 	this.width = 1024;

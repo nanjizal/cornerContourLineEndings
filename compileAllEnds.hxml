@@ -9,7 +9,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_no.js
+-js binHtml/StyleEndLine_no.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.no
@@ -17,7 +17,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_no.js"></script></body></html>' >StyleEndLine_no.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_no.js"></script></body></html>' >binHtml/StyleEndLine_no.html
 
 
 --next
@@ -33,7 +33,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_begin.js
+-js binHtml/StyleEndLine_begin.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.begin
@@ -41,7 +41,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_begin.js"></script></body></html>' >StyleEndLine_begin.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_begin.js"></script></body></html>' >binHtml/StyleEndLine_begin.html
 
 --next
 
@@ -56,7 +56,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_end.js
+-js binHtml/StyleEndLine_end.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.end
@@ -64,7 +64,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_end.js"></script></body></html>' >StyleEndLine_end.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_end.js"></script></body></html>' >binHtml/StyleEndLine_end.html
 
 --next
 
@@ -79,7 +79,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_both.js
+-js binHtml/StyleEndLine_both.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.both
@@ -87,7 +87,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_both.js"></script></body></html>' >StyleEndLine_both.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_both.js"></script></body></html>' >binHtml/StyleEndLine_both.html
 
 --next
 
@@ -102,7 +102,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_halfRound.js
+-js binHtml/StyleEndLine_halfRound.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.halfRound
@@ -110,7 +110,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_halfRound.js"></script></body></html>' >StyleEndLine_halfRound.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_halfRound.js"></script></body></html>' >binHtml/StyleEndLine_halfRound.html
 
 --next
 
@@ -125,7 +125,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_quadrant.js
+-js binHtml/StyleEndLine_quadrant.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.quadrant
@@ -133,7 +133,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_quadrant.js"></script></body></html>' >StyleEndLine_quadrant.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_quadrant.js"></script></body></html>' >binHtml/StyleEndLine_quadrant.html
 
 --next
 
@@ -148,7 +148,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_triangleBegin.js
+-js binHtml/StyleEndLine_triangleBegin.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.triangleBegin
@@ -156,7 +156,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleBegin.js"></script></body></html>' >StyleEndLine_triangleBegin.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleBegin.js"></script></body></html>' >binHtml/StyleEndLine_triangleBegin.html
 
 --next
 
@@ -171,7 +171,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_triangleEnd.js
+-js binHtml/StyleEndLine_triangleEnd.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.triangleEnd
@@ -179,7 +179,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleEnd.js"></script></body></html>' >StyleEndLine_triangleEnd.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleEnd.js"></script></body></html>' >binHtml/StyleEndLine_triangleEnd.html
 
 --next
 
@@ -194,7 +194,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_triangleBoth.js
+-js binHtml/StyleEndLine_triangleBoth.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.triangleBoth
@@ -202,7 +202,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleBoth.js"></script></body></html>' >StyleEndLine_triangleBoth.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_triangleBoth.js"></script></body></html>' >binHtml/StyleEndLine_triangleBoth.html
 
 --next
 
@@ -217,7 +217,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_arrowBegin.js
+-js binHtml/StyleEndLine_arrowBegin.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.arrowBegin
@@ -225,7 +225,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBegin.js"></script></body></html>' >StyleEndLine_arrowBegin.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBegin.js"></script></body></html>' >binHtml/StyleEndLine_arrowBegin.html
 
 --next
 
@@ -240,7 +240,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_arrowEnd.js
+-js binHtml/StyleEndLine_arrowEnd.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.arrowEnd
@@ -248,7 +248,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowEnd.js"></script></body></html>' >StyleEndLine_arrowEnd.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowEnd.js"></script></body></html>' >binHtml/StyleEndLine_arrowEnd.html
 
 --next
 
@@ -263,7 +263,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_arrowBoth.js
+-js binHtml/StyleEndLine_arrowBoth.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.arrowBoth
@@ -271,7 +271,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBoth.js"></script></body></html>' >StyleEndLine_arrowBoth.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBoth.js"></script></body></html>' >binHtml/StyleEndLine_arrowBoth.html
 
 --next
 
@@ -286,7 +286,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js StyleEndLine_arrowBoth.js
+-js binHtml/StyleEndLine_arrowBoth.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.arrowBoth
@@ -294,7 +294,146 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBoth.js"></script></body></html>' >StyleEndLine_arrowBoth.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_arrowBoth.js"></script></body></html>' >binHtml/StyleEndLine_arrowBoth.html
+
+--next
+
+### StyleEndLine_circleBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/StyleEndLine_circleBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.circleBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_circleBegin.js"></script></body></html>' >binHtml/StyleEndLine_circleBegin.html
+
+--next
+
+### StyleEndLine_circleEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/StyleEndLine_circleEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.circleEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_circleEnd.js"></script></body></html>' >binHtml/StyleEndLine_circleEnd.html
+
+--next
+
+### StyleEndLine_circleBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/StyleEndLine_circleBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.circleBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_circleBoth.js"></script></body></html>' >binHtml/StyleEndLine_circleBoth.html
+
+--next
+
+
+### StyleEndLine_squareBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/StyleEndLine_squareBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.squareBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_squareBegin.js"></script></body></html>' >binHtml/StyleEndLine_squareBegin.html
+
+--next
+
+### StyleEndLine_squareEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/StyleEndLine_squareEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.squareEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_squareEnd.js"></script></body></html>' >binHtml/StyleEndLine_squareEnd.html
+
+--next
+
+### StyleEndLine_squareBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/StyleEndLine_squareBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.squareBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="StyleEndLine_squareBoth.js"></script></body></html>' >binHtml/StyleEndLine_squareBoth.html
 
 --next
 
@@ -312,7 +451,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_no.js
+-js binHtml/gradient_StyleEndLine_no.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.no
@@ -320,7 +459,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_no.js"></script></body></html>' >gradient_StyleEndLine_no.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_no.js"></script></body></html>' >binHtml/gradient_StyleEndLine_no.html
 
 
 --next
@@ -336,7 +475,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_begin.js
+-js binHtml/gradient_StyleEndLine_begin.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.begin
@@ -344,7 +483,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_begin.js"></script></body></html>' >gradient_StyleEndLine_begin.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_begin.js"></script></body></html>' >binHtml/gradient_StyleEndLine_begin.html
 
 --next
 
@@ -359,7 +498,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_end.js
+-js binHtml/gradient_StyleEndLine_end.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.end
@@ -367,7 +506,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_end.js"></script></body></html>' >gradient_StyleEndLine_end.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_end.js"></script></body></html>' >binHtml/gradient_StyleEndLine_end.html
 
 --next
 
@@ -382,7 +521,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_both.js
+-js binHtml/gradient_StyleEndLine_both.js
 -main cornerContourWebGLTest.CornerContourWebGL
 #-D gradientTest
 -D StyleEndLine.both
@@ -390,7 +529,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_both.js"></script></body></html>' >gradient_StyleEndLine_both.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_both.js"></script></body></html>' >binHtml/gradient_StyleEndLine_both.html
 
 --next
 
@@ -405,7 +544,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_halfRound.js
+-js binHtml/gradient_StyleEndLine_halfRound.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.halfRound
@@ -413,7 +552,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_halfRound.js"></script></body></html>' >gradient_StyleEndLine_halfRound.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_halfRound.js"></script></body></html>' >binHtml/gradient_StyleEndLine_halfRound.html
 
 --next
 
@@ -428,7 +567,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_quadrant.js
+-js binHtml/gradient_StyleEndLine_quadrant.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.quadrant
@@ -436,7 +575,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_quadrant.js"></script></body></html>' >gradient_StyleEndLine_quadrant.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_quadrant.js"></script></body></html>' >binHtml/gradient_StyleEndLine_quadrant.html
 
 --next
 
@@ -451,7 +590,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_triangleBegin.js
+-js binHtml/gradient_StyleEndLine_triangleBegin.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.triangleBegin
@@ -459,7 +598,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleBegin.js"></script></body></html>' >gradient_StyleEndLine_triangleBegin.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleBegin.js"></script></body></html>' >binHtml/gradient_StyleEndLine_triangleBegin.html
 
 --next
 
@@ -474,7 +613,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_triangleEnd.js
+-js binHtml/gradient_StyleEndLine_triangleEnd.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.triangleEnd
@@ -482,7 +621,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleEnd.js"></script></body></html>' >gradient_StyleEndLine_triangleEnd.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleEnd.js"></script></body></html>' >binHtml/gradient_StyleEndLine_triangleEnd.html
 
 --next
 
@@ -497,7 +636,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_triangleBoth.js
+-js binHtml/gradient_StyleEndLine_triangleBoth.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.triangleBoth
@@ -505,7 +644,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleBoth.js"></script></body></html>' >gradient_StyleEndLine_triangleBoth.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_triangleBoth.js"></script></body></html>' >binHtml/gradient_StyleEndLine_triangleBoth.html
 
 --next
 
@@ -520,7 +659,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_arrowBegin.js
+-js binHtml/gradient_StyleEndLine_arrowBegin.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.arrowBegin
@@ -528,7 +667,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowBegin.js"></script></body></html>' >gradient_StyleEndLine_arrowBegin.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowBegin.js"></script></body></html>' >binHtml/gradient_StyleEndLine_arrowBegin.html
 
 --next
 
@@ -543,7 +682,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_arrowEnd.js
+-js binHtml/gradient_StyleEndLine_arrowEnd.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.arrowEnd
@@ -551,7 +690,7 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowEnd.js"></script></body></html>' >gradient_StyleEndLine_arrowEnd.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowEnd.js"></script></body></html>' >binHtml/gradient_StyleEndLine_arrowEnd.html
 
 --next
 
@@ -566,7 +705,7 @@
 -lib cornerContour
 -lib traceCount
 -cp src
--js gradient_StyleEndLine_arrowBoth.js
+-js binHtml/gradient_StyleEndLine_arrowBoth.js
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
 -D StyleEndLine.arrowBoth
@@ -574,8 +713,144 @@
 -dce full
 #--no-traces
 --next
--cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowBoth.js"></script></body></html>' >gradient_StyleEndLine_arrowBoth.html
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_arrowBoth.js"></script></body></html>' >binHtml/gradient_StyleEndLine_arrowBoth.html
+
+
+### StyleEndLine_circleBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/gradient_StyleEndLine_circleBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.circleBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_circleBegin.js"></script></body></html>' >binHtml/gradient_StyleEndLine_circleBegin.html
+
+--next
+
+### StyleEndLine_circleEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/gradient_StyleEndLine_circleEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.circleEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_circleEnd.js"></script></body></html>' >binHtml/gradient_StyleEndLine_circleEnd.html
+
+--next
+
+### StyleEndLine_circleBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/gradient_StyleEndLine_circleBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+#-D gradientTest
+-D StyleEndLine.circleBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_circleBoth.js"></script></body></html>' >binHtml/gradient_StyleEndLine_circleBoth.html
 
 --next
 
 
+### StyleEndLine_squareBegin;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/gradient_StyleEndLine_squareBegin.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.squareBegin
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_squareBegin.js"></script></body></html>' >binHtml/gradient_StyleEndLine_squareBegin.html
+
+--next
+
+### StyleEndLine_squareEnd;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/gradient_StyleEndLine_squareEnd.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.squareEnd
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_squareEnd.js"></script></body></html>' >binHtml/gradient_StyleEndLine_squareEnd.html
+
+--next
+
+### StyleEndLine_squareBoth;
+
+-lib fracs
+-lib justPath
+-lib pallette
+-lib hxPolyK
+-lib poly2trihx 
+-lib hxGeomAlgo
+-lib cornerContour
+-lib traceCount
+-cp src
+-js binHtml/gradient_StyleEndLine_squareBoth.js
+-main cornerContourWebGLTest.CornerContourWebGL
+-D gradientTest
+-D StyleEndLine.squareBoth
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="gradient_StyleEndLine_squareBoth.js"></script></body></html>' >binHtml/gradient_StyleEndLine_squareBoth.html
+
+--next

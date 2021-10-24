@@ -11,7 +11,7 @@
 
 -main cornerContourWebGLTest.CornerContourWebGL
 -D gradientTest
--D StyleEndLine.quadrant
+-D StyleEndLine.squareBoth
 -D js-flatten 
 -dce full
 #--no-traces
